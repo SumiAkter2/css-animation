@@ -10,15 +10,24 @@ h1 {
     font-size: 5rem;
 }
 
+.cloud-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
 .cloud-box {
-    width: 400px;
-    height: 400px;
-    margin: 20px;
+    width: 150px;
+    height: 100px;
+    margin: 40px;
     background: rgba(34, 33, 33, 0.965);
+    border-radius: 4px;
 }
 
 .cloud-box img {
     transform: rotateY(150deg);
+    width: 100px;
 }
 
 .circle {
@@ -41,4 +50,106 @@ h1 {
     scale: 1.2;
     background: purple;
     color: rgb(251, 167, 167);
+}
+
+.nature {
+    border: 2px solid rgba(128, 128, 128, 0.544);
+    width: 800px;
+    margin: 20px auto;
+}
+
+.sky,
+.grass,
+.road {
+    position: relative;
+}
+
+.sky {
+    background: skyblue;
+    width: 800px;
+    height: 140px;
+
+}
+
+.cloud-img1 {
+    width: 300px;
+    position: absolute;
+    top: -20px;
+    left: 0;
+}
+
+.cloud-img2 {
+    width: 350px;
+    position: absolute;
+    top: -20px;
+    left: 20%;
+}
+
+.cloud-img3 {
+    width: 300px;
+    position: absolute;
+    top: -20px;
+    right: 0;
+}
+
+.grass {
+    background: seagreen;
+    width: 800px;
+    height: 100px;
+}
+
+.road {
+    background: dimgrey;
+    width: 800px;
+    height: 200px;
+    border-top: 10px solid gray;
+    border-bottom: 10px solid gray;
+    box-sizing: border-box;
+}
+
+.line {
+    position: absolute;
+    top: 50%;
+    border: 2px dashed #fff;
+    height: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.car {
+    /* transform: rotateY(180deg); */
+    right: 10px;
+    z-index: 100;
+    position: absolute;
+    top: -45%;
+    width: 300px;
+
+}
+
+.road:hover .car {
+    animation: carDrive 2s linear 0.3s infinite;
+}
+
+@keyframes carDrive {
+    0% {
+        transform: translateX(0);
+    }
+
+    40% {
+        transform: translateX(-450px);
+    }
+
+    50%,
+
+    60% {
+        transform: translateX(-450px);
+    }
+
+    90% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
