@@ -13,8 +13,9 @@ h1 {
 .cloud-box {
     width: 100%;
     height: 400px;
-    background: lightblue;
+    background: rgba(34, 33, 33, 0.965);
 }
-.cloud-box img{
-    transform: ;
+
+.cloud-box img {
+    transform: rotateY(150deg);
 }
